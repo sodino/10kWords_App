@@ -247,7 +247,7 @@ class LearningManager: ObservableObject {
             return .failure(PanelSaveError(message: "zh/en/example 不能为空"))
         }
 
-        let model = NewZh2EnData(zh: zh, en: en, example: example, time: time, url: url, version: 1)
+        let model = NewZh2EnData(zh: zh, en: en, exampleSentence: example, time: time, url: url, version: 1)
 
         guard let jsonData = try? encoder.encode(model) else {
             return .failure(PanelSaveError(message: "JSON 编码失败"))
