@@ -180,8 +180,7 @@ class LearningManager: ObservableObject {
             meaning: meaning,
             exampleSentence: example,
             time: time,
-            url: url,
-            version: 2
+            url: url
         )
 
         // 检查是否存在已有文件（append 模式）
@@ -190,7 +189,7 @@ class LearningManager: ObservableObject {
         }
 
         // 新建文件
-        let newWord = NewWordData(word: word, phoneticSymbolEn: en, phoneticSymbolAm: am, sample: [sample])
+        let newWord = NewWordData(word: word, phoneticSymbolEn: en, phoneticSymbolAm: am, sample: [sample], version: 2)
 
         guard let jsonData = try? encoder.encode(newWord) else {
             return .failure(PanelSaveError(message: "JSON 编码失败"))

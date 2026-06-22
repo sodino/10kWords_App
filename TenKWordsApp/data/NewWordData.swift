@@ -7,7 +7,6 @@ struct WordSample: Codable {
     let exampleSentence: String
     let time: String
     let url: String
-    let version: Int
 }
 
 /// New Word 面板序列化结构
@@ -16,4 +15,5 @@ struct NewWordData: Codable {
     let phoneticSymbolEn: String
     let phoneticSymbolAm: String
     var sample: [WordSample]
+    let version: Int
 }
