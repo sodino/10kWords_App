@@ -146,7 +146,7 @@ class LearningManager: ObservableObject {
 
     private static let encoder: JSONEncoder = {
         let e = JSONEncoder()
-        e.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
+        e.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
         return e
     }()
 
