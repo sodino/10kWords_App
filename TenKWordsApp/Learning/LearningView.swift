@@ -79,8 +79,8 @@ struct LearningView: View {
                     Spacer()
 
                     Button {
-                        manager.saveCurrentProgress()
                         manager.nextSentence()
+                        manager.saveCurrentProgress()
                     } label: {
                         Text("→")
                             .font(.title2)
